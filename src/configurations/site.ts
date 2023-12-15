@@ -1,6 +1,6 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: 'Vite - Shadcn',
-  description: 'Shadcn on Vite',
+  name: 'Your New Name',
+  description: 'Your New Description',
 };

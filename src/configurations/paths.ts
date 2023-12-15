@@ -43,7 +43,7 @@ export const pathsArr: NavItem[] = [
 ];
 
 export const links = {
-  twitter: 'https://github.com/Painkiller995',
+  twitter: 'https://twitter.com/fahddaher',
   github: 'https://github.com/Painkiller995',
   docs: 'https://ui.shadcn.com',
 };
