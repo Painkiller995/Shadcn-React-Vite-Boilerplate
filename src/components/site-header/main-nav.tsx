@@ -5,15 +5,15 @@ import { NavItem } from '@/types/nav';
 
 import { buttonVariants } from '../ui/button';
 
-interface MainNavProps {
+interface MainNavProps extends React.HTMLAttributes<HTMLDivElement> {
   items?: NavItem[];
 }
 
-export function MainNav({ items }: MainNavProps) {
+export function MainNav({ items, ...other }: MainNavProps) {
   const location = useLocation();
 
   return (
-    <>
+    <div {...other}>
       {items?.length ? (
         <nav className="flex gap-6">
           {items.map((item, index) => {
@@ -44,6 +44,6 @@ export function MainNav({ items }: MainNavProps) {
           })}
         </nav>
       ) : null}
-    </>
+    </div>
   );
 }
