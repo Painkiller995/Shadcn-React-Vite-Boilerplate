@@ -5,7 +5,7 @@ import { siteConfig } from '@/configurations/site';
 
 import { Icons } from '../icons';
 import { ModeToggle } from '../theme-provider';
-import { buttonVariants } from '../ui/button';
+import { Button, buttonVariants } from '../ui/button';
 import { MainNav } from './main-nav';
 
 interface SiteHeaderProps {
@@ -20,12 +20,13 @@ export default function SiteHeader({ useNav = true, useHelp = false }: SiteHeade
         <div className="flex items-center gap-6 md:gap-10">
           <Link to={sitePaths.home}>
             <div className="flex items-center gap-6 md:gap-10">
+              <Button className="block lg:hidden" variant="outline" size="icon" />
               <Icons.Logo className="h-6 w-6" />
               <span className="inline-block font-bold">{siteConfig.name}</span>
             </div>
           </Link>
 
-          {useNav ? <MainNav className="hidden sm:block" items={pathsArr} /> : null}
+          {useNav ? <MainNav className="hidden lg:block" items={pathsArr} /> : null}
         </div>
 
         <div className="flex flex-1 justify-end space-x-4  ">
