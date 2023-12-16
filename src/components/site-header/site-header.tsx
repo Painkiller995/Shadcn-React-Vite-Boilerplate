@@ -25,7 +25,7 @@ export default function SiteHeader({ useNav = true, useHelp = false }: SiteHeade
             </div>
           </Link>
 
-          {useNav ? <MainNav items={pathsArr} /> : null}
+          {useNav ? <MainNav className="hidden sm:block" items={pathsArr} /> : null}
         </div>
 
         <div className="flex flex-1 justify-end space-x-4  ">
