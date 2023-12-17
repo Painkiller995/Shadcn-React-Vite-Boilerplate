@@ -53,54 +53,6 @@ export const pathsArr: NavItem[] = [
     href: '/disabled',
     disabled: true,
   },
-  {
-    title: 'Disabled',
-    description: 'This link is disabled',
-    href: '/disabled',
-    disabled: true,
-  },
-  {
-    title: 'Disabled',
-    description: 'This link is disabled',
-    href: '/disabled',
-    disabled: true,
-  },
-  {
-    title: 'Disabled',
-    description: 'This link is disabled',
-    href: '/disabled',
-    disabled: true,
-  },
-  {
-    title: 'Disabled',
-    description: 'This link is disabled',
-    href: '/disabled',
-    disabled: true,
-  },
-  {
-    title: 'Disabled',
-    description: 'This link is disabled',
-    href: '/disabled',
-    disabled: true,
-  },
-  {
-    title: 'Disabled',
-    description: 'This link is disabled',
-    href: '/disabled',
-    disabled: true,
-  },
-  {
-    title: 'Disabled',
-    description: 'This link is disabled',
-    href: '/disabled',
-    disabled: true,
-  },
-  {
-    title: 'Disabled',
-    description: 'This link is disabled',
-    href: '/disabled',
-    disabled: true,
-  },
 ];
 
 export const links = {
