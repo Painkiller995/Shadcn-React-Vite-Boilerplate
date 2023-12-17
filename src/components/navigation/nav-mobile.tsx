@@ -29,7 +29,12 @@ export function NavMobile({ items, open }: NavMobileProps) {
     >
       {items
         ? items.map((item) => (
-            <ListItem key={item.title} title={item.title} href={item.href}>
+            <ListItem
+              key={item.title}
+              title={item.title}
+              href={item.href}
+              style={item.disabled ? { pointerEvents: 'none' } : undefined}
+            >
               {item.description}
             </ListItem>
           ))
