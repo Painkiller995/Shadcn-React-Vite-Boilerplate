@@ -11,7 +11,10 @@ interface NavigatorProps extends React.HTMLAttributes<HTMLDivElement> {}
 export const Navigator = ({ ...other }: NavigatorProps) => {
   const [isOpen, setOpen] = useState(false);
   return (
-    <div {...other}>
+    <div
+      className="flex h-16 items-center gap-6 space-x-4 overflow-hidden px-6 sm:justify-between sm:space-x-0"
+      {...other}
+    >
       <div className="lg:hidden">
         <NavMobile items={pathsArr} open={isOpen} />
         <Squash toggled={isOpen} size={20} toggle={setOpen} />
