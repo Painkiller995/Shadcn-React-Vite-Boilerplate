@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { cn } from '@/lib/utils';
 import { NavItem } from '@/types/nav';
@@ -9,10 +9,21 @@ interface NavMobileProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 export function NavMobile({ items, open }: NavMobileProps) {
+  useEffect(() => {
+    if (open) {
+      document.body.classList.add('overflow-hidden');
+    } else {
+      document.body.classList.remove('overflow-hidden');
+    }
+    return () => {
+      document.body.classList.remove('overflow-hidden');
+    };
+  }, [open]);
+
   return (
     <ul
       className={cn(
-        'fixed left-0  top-16 z-50 grid h-screen w-full gap-3 overflow-scroll bg-background p-5 pb-20 md:grid-cols-2',
+        'fixed left-0  top-16 z-50 grid h-screen w-full gap-3 overflow-scroll bg-background p-5 pb-40 md:grid-cols-2',
         { hidden: !open }
       )}
     >
