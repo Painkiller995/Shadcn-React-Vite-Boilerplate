@@ -4,9 +4,10 @@ import { sitePaths } from '@/configurations/paths';
 // layouts
 import MainLayout from '@/layouts/main/layout';
 
-import { errorsRoutes } from './errors';
+import { appRoutes } from './app-routes';
+import { errorsRoutes } from './errors-routes';
 // config
-import { HomePage, mainRoutes } from './main';
+import { HomePage, mainRoutes } from './main-routes';
 
 // ----------------------------------------------------------------------
 
@@ -21,6 +22,7 @@ export default function Router() {
       ),
     },
     ...mainRoutes,
+    ...appRoutes,
     ...errorsRoutes,
     { path: '*', element: <Navigate to={sitePaths.page404} replace /> },
   ]);

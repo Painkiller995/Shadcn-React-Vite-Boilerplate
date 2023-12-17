@@ -9,8 +9,9 @@ import MainLayout from '@/layouts/main/layout';
 // ----------------------------------------------------------------------
 
 export const HomePage = lazy(() => import('@/pages/home-page'));
-
 const AboutPage = lazy(() => import('@/pages/about-page'));
+
+const PageOne = lazy(() => import('@/pages/page-one'));
 
 // ----------------------------------------------------------------------
 
