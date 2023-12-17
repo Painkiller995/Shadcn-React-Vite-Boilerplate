@@ -12,7 +12,7 @@ export function NavMobile({ items, open }: NavMobileProps) {
   return (
     <div
       className={cn(
-        'fixed left-0 top-16 h-screen w-screen border-b bg-background/95 pt-1 backdrop-blur supports-[backdrop-filter]:bg-background/80',
+        'fixed left-0 top-16 h-screen w-screen bg-background/95 pt-1 backdrop-blur supports-[backdrop-filter]:bg-background/90',
         {
           'translate-y-0': open,
           'translate-y-full': !open,
