@@ -12,11 +12,8 @@ export function NavMobile({ items, open }: NavMobileProps) {
   return (
     <ul
       className={cn(
-        'fixed left-0  top-16 z-50 grid h-screen w-full gap-3 bg-background p-5 md:grid-cols-2',
-        {
-          'translate-y-0': open,
-          'translate-y-full': !open,
-        }
+        'fixed left-0  top-16 z-50 grid h-screen w-full gap-3 overflow-scroll bg-background p-5 pb-20 md:grid-cols-2',
+        { hidden: !open }
       )}
     >
       {items
