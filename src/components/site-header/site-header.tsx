@@ -18,7 +18,7 @@ export default function SiteHeader({ useNav = true, useHelp = false }: SiteHeade
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b bg-background">
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="flex h-16 items-center gap-6 space-x-4 overflow-hidden px-6 sm:justify-between sm:space-x-0">
         {useNav ? <Squash toggled={isOpen} size={20} toggle={setOpen} /> : null}
         <Link className="flex items-center gap-6 md:gap-10" to={sitePaths.home}>
@@ -27,7 +27,7 @@ export default function SiteHeader({ useNav = true, useHelp = false }: SiteHeade
 
         {useNav ? (
           <NavDesktop
-            className="flex items-center gap-6 overflow-auto scrollbar-hide md:gap-10"
+            className="scrollbar-hide flex items-center gap-6 overflow-auto md:gap-10"
             items={pathsArr}
           />
         ) : null}
