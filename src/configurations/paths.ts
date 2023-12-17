@@ -2,7 +2,7 @@ import { NavItem } from '@/types/nav';
 
 export const sitePaths = {
   home: '/',
-  pageOne: 'PageOne',
+  pageOne: '/PageOne',
   about: '/about',
   page403: '/403',
   page404: '/404',
