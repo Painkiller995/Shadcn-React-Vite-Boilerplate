@@ -1,12 +1,13 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { links, pathsArr, sitePaths } from '@/configurations/paths';
 import { siteConfig } from '@/configurations/site';
 
 import { Icons } from '../icons';
+import { NavDesktop, Squash } from '../navigation';
 import { ModeToggle } from '../theme-provider';
-import { Button, buttonVariants } from '../ui/button';
-import { MainNav } from './main-nav';
+import { buttonVariants } from '../ui/button';
 
 interface SiteHeaderProps {
   useNav?: boolean;
@@ -14,20 +15,22 @@ interface SiteHeaderProps {
 }
 
 export default function SiteHeader({ useNav = true, useHelp = false }: SiteHeaderProps) {
+  const [isOpen, setOpen] = useState(false);
+
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background">
-      <div className="flex h-16 items-center space-x-4 px-6 sm:justify-between sm:space-x-0">
-        <div className="flex items-center gap-6 md:gap-10">
-          <Link to={sitePaths.home}>
-            <div className="flex items-center gap-6 md:gap-10">
-              <Button className="block lg:hidden" variant="outline" size="icon" />
-              <Icons.Logo className="h-6 w-6" />
-              <span className="inline-block font-bold">{siteConfig.name}</span>
-            </div>
-          </Link>
+      <div className="flex h-16 items-center gap-6 space-x-4 overflow-hidden px-6 sm:justify-between sm:space-x-0">
+        {useNav ? <Squash toggled={isOpen} size={20} toggle={setOpen} /> : null}
+        <Link className="flex items-center gap-6 md:gap-10" to={sitePaths.home}>
+          <Icons.Logo className="h-6 w-6" />
+        </Link>
 
-          {useNav ? <MainNav className="hidden lg:block" items={pathsArr} /> : null}
-        </div>
+        {useNav ? (
+          <NavDesktop
+            className="flex items-center gap-6 overflow-auto scrollbar-hide md:gap-10"
+            items={pathsArr}
+          />
+        ) : null}
 
         <div className="flex flex-1 justify-end space-x-4  ">
           {useHelp ? (
