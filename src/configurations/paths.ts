@@ -2,6 +2,7 @@ import { NavItem } from '@/types/nav';
 
 export const sitePaths = {
   home: '/',
+  pageOne: 'PageOne',
   about: '/about',
   page403: '/403',
   page404: '/404',
@@ -12,23 +13,27 @@ export const sitePaths = {
 export const pathsArr: NavItem[] = [
   {
     title: 'Home',
-    href: '/',
+    href: sitePaths.home,
+  },
+  {
+    title: 'Page One',
+    href: sitePaths.pageOne,
   },
   {
     title: 'About',
-    href: '/about',
+    href: sitePaths.about,
   },
   {
     title: '403',
-    href: '/403',
+    href: sitePaths.page403,
   },
   {
     title: '404',
-    href: '/404',
+    href: sitePaths.page404,
   },
   {
     title: '500',
-    href: '/500',
+    href: sitePaths.page500,
   },
   {
     title: 'Google New Tab',

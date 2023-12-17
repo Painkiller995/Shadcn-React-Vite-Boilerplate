@@ -21,6 +21,6 @@ export const appRoutes = [
         </Suspense>
       </MainLayout>
     ),
-    children: [{ path: sitePaths.about, element: <PageOne /> }],
+    children: [{ path: sitePaths.pageOne, element: <PageOne /> }],
   },
 ];
