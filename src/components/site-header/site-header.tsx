@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { links, pathsArr, sitePaths } from '@/configurations/paths';
-import { siteConfig } from '@/configurations/site';
 
 import { Icons } from '../icons';
 import { NavDesktop, Squash } from '../navigation';
@@ -27,7 +26,7 @@ export default function SiteHeader({ useNav = true, useHelp = false }: SiteHeade
 
         {useNav ? (
           <NavDesktop
-            className="scrollbar-hide flex items-center gap-6 overflow-auto md:gap-10"
+            className="flex items-center gap-6 overflow-auto scrollbar-hide md:gap-10"
             items={pathsArr}
           />
         ) : null}
