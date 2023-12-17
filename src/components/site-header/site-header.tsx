@@ -17,8 +17,7 @@ interface SiteHeaderProps {
 export default function SiteHeader({ useNav = true, useHelp = false }: SiteHeaderProps) {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="flex h-16 items-center space-x-4 overflow-hidden px-6 sm:justify-between sm:gap-6 sm:space-x-0">
-        <HeaderLogo />
+      <div className="flex h-16 items-center  overflow-hidden px-6 sm:justify-between sm:gap-6 sm:space-x-0">
         {useNav ? <Navigator /> : null}
 
         <div className="flex flex-1 justify-end space-x-4">
