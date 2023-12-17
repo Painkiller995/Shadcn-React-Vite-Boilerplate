@@ -12,7 +12,7 @@ export function NavMobile({ items, open }: NavMobileProps) {
   return (
     <ul
       className={cn(
-        ' fixed left-0 top-16 grid h-screen w-screen gap-3 bg-background p-5 md:grid-cols-2',
+        'fixed left-0  top-16 z-50 grid h-screen w-full gap-3 bg-background p-5 md:grid-cols-2',
         {
           'translate-y-0': open,
           'translate-y-full': !open,
