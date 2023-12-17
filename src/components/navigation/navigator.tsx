@@ -1,15 +1,5 @@
 import { useState } from 'react';
 
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
-} from '@/components/ui/navigation-menu';
 import { pathsArr } from '@/configurations/paths';
 
 import { NavDesktop } from './nav-desktop';
@@ -21,7 +11,7 @@ interface NavigatorProps extends React.HTMLAttributes<HTMLDivElement> {}
 export const Navigator = ({ ...other }: NavigatorProps) => {
   const [isOpen, setOpen] = useState(false);
   return (
-    <>
+    <div {...other}>
       <div className="lg:hidden">
         <NavMobile items={pathsArr} open={isOpen} />
         <Squash toggled={isOpen} size={20} toggle={setOpen} />
@@ -30,6 +20,6 @@ export const Navigator = ({ ...other }: NavigatorProps) => {
         className="flex items-center gap-6 overflow-auto scrollbar-hide md:gap-10"
         items={pathsArr}
       />
-    </>
+    </div>
   );
 };
