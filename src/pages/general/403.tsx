@@ -17,10 +17,10 @@ export default function Page403() {
         <h1 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl">
           Oops! Access Denied
         </h1>
-        <p className="max-w-[700px] pt-4 text-lg text-muted-foreground">
+        <p className="p-4 text-center text-lg text-muted-foreground">
           Sorry, but it seems you lack the proper permissions to access this resource.
         </p>
-        <p className="mb-4 pt-5 text-2xl">🚫😟</p>
+        <p className="mb-4 p-5 text-2xl">🚫😟</p>
         <Link to={sitePaths.home}>
           <div
             className={buttonVariants({
