@@ -10,25 +10,23 @@ interface NavMobileProps extends React.HTMLAttributes<HTMLDivElement> {
 
 export function NavMobile({ items, open }: NavMobileProps) {
   return (
-    <div
+    <ul
       className={cn(
-        'fixed left-0 top-16 h-screen w-screen bg-background/95 pt-1 backdrop-blur supports-[backdrop-filter]:bg-background/90',
+        ' fixed left-0 top-16 grid h-screen w-screen gap-3 bg-background p-5 md:grid-cols-2',
         {
           'translate-y-0': open,
           'translate-y-full': !open,
         }
       )}
     >
-      <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-        {items
-          ? items.map((item) => (
-              <ListItem key={item.title} title={item.title} href={item.href}>
-                {item.description}
-              </ListItem>
-            ))
-          : null}
-      </ul>
-    </div>
+      {items
+        ? items.map((item) => (
+            <ListItem key={item.title} title={item.title} href={item.href}>
+              {item.description}
+            </ListItem>
+          ))
+        : null}
+    </ul>
   );
 }
 
