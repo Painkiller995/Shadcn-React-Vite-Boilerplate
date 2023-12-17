@@ -7,7 +7,7 @@ export const sitePaths = {
   page403: '/403',
   page404: '/404',
   page500: '/500',
-  needHelp: '/',
+  needHelp: 'https://en.wikipedia.org/wiki/Help',
 };
 
 export const pathsArr: NavItem[] = [
