@@ -18,9 +18,9 @@ export default function SiteHeader({ useNav = true, useHelp = false }: SiteHeade
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="flex h-16 items-center gap-6 space-x-4 overflow-hidden px-6 sm:justify-between sm:space-x-0">
+      <div className="flex h-16 items-center space-x-4 overflow-hidden px-6 sm:justify-between sm:space-x-0 md:gap-6">
         {useNav ? <Squash toggled={isOpen} size={20} toggle={setOpen} /> : null}
-        <Link className="flex items-center gap-6 md:gap-10" to={sitePaths.home}>
+        <Link className="flex items-center" to={sitePaths.home}>
           <Icons.Logo className="h-6 w-6" />
         </Link>
 
